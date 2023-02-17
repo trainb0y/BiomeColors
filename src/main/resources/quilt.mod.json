@@ -40,6 +40,10 @@
 			{
 				"id": "minecraft",
 				"versions": ">=1.19.3"
+			},
+			{
+				"id": "yet-another-config-lib",
+				"versions": ">=2.2.0"
 			}
 		]
 	},

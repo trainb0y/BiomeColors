@@ -7,6 +7,7 @@ qkl = "1.1.0+kt.1.8.0+flk.1.9.0"
 loader = "0.17.8"
 mappings = "1.19.3+build.9"
 loom = "1.0.+"
+yacl = "2.2.0"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
@@ -17,6 +18,8 @@ qfapi_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api
 qkl = { module = "org.quiltmc.quilt-kotlin-libraries:quilt-kotlin-libraries", version.ref = "qkl" }
 quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "loader" }
 quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "mappings" }
+
+yacl = { module = "dev.isxander:yet-another-config-lib", version.ref = "yacl" }
 
 [bundles]
 quilted_fabric_api = ["qfapi", "qfapi_deprecated"]
