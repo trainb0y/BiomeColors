@@ -23,8 +23,9 @@ fun openConfigScreen(parent: Screen?): Screen {
 
 	val client = MinecraftClient.getInstance()
 	val category = ConfigCategory.createBuilder().name(Text.literal("test"))
-	client.world?.registryManager?.get(RegistryKeys.BIOME)?.forEach { biome ->
-		val group = OptionGroup.createBuilder().name(Text.literal("test2"))
+	client.world?.registryManager?.get(RegistryKeys.BIOME)?.keys?.forEach { key ->
+		val biome = client!!.world!!.registryManager.get(RegistryKeys.BIOME)!!.get(key)!!
+		val group = OptionGroup.createBuilder().name(Text.literal(key.value.toString().split(":").last().split("_", " ").joinToString(" ") { it.capitalize() }))
 		group.option(
 			Option.createBuilder(Color::class.java)
 				.name(Text.literal("foliage color"))
