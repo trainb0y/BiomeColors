@@ -22,7 +22,8 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
-	maven("https://maven.isxander.dev/releases")
+	maven("https://maven.isxander.dev/releases") // yacl
+	maven(uri("https://maven.terraformersmc.com/")) // modmenu
 }
 
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
@@ -56,6 +57,7 @@ dependencies {
 	modImplementation(libs.qkl)
 
 	modImplementation(libs.yacl)
+	modImplementation(libs.modmenu)
 }
 
 tasks {

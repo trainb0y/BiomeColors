@@ -8,6 +8,7 @@ loader = "0.17.8"
 mappings = "1.19.3+build.9"
 loom = "1.0.+"
 yacl = "2.2.0"
+modmenu = "5.0.2"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
@@ -20,6 +21,7 @@ quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "loader" }
 quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "mappings" }
 
 yacl = { module = "dev.isxander:yet-another-config-lib", version.ref = "yacl" }
+modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 
 [bundles]
 quilted_fabric_api = ["qfapi", "qfapi_deprecated"]

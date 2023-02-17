@@ -22,6 +22,10 @@
 			"init": {
 				"adapter": "kotlin",
 				"value": "io.github.trainb0y.biomecolor.BiomeColor"
+			},
+			"modmenu": {
+				"adapter": "kotlin",
+				"value": "io.github.trainb0y.biomecolor.ModMenuIntegration"
 			}
 		},
 		"depends": [

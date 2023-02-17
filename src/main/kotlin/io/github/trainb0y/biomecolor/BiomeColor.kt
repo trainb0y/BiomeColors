@@ -8,17 +8,13 @@ import org.quiltmc.qsl.base.api.entrypoint.ModInitializer
 import org.quiltmc.qsl.lifecycle.api.client.event.ClientTickEvents
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import java.util.Optional
 import kotlin.jvm.optionals.getOrNull
 
 object BiomeColor : ModInitializer {
-    val LOGGER: Logger = LoggerFactory.getLogger("Biome Color Tweaks")
+	val LOGGER: Logger = LoggerFactory.getLogger("Biome Color Tweaks")
 
-    override fun onInitialize(mod: ModContainer) {
-		ClientTickEvents.START.register(ClientTickEvents.Start { client ->
-			val biome = client.world?.getBiome(client.player?.blockPos)?.value() ?: return@Start
-			(biome as BiomeMixin).effects = effectBuilderFrom(biome).grassColor(0xdeadbeef.toInt()).build()
-		})
+	override fun onInitialize(mod: ModContainer) {
+
 	}
 
 	fun effectBuilderFrom(effects: BiomeEffects): BiomeEffects.Builder {
